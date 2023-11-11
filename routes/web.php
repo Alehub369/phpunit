@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -20,5 +21,8 @@ Route::view('profile', 'profile');
     return redirect('profile');
 }); */
 
-Route::post('profile', [App\Http\Controllers\ProfileController::class, 'upload']);
+// Route::post('profile', [App\Http\Controllers\ProfileController::class, 'upload']);
+
+Route::post('/profile', [ProfileController::class, 'upload']);
+
 
